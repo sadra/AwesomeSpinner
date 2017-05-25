@@ -6,7 +6,7 @@ Awesome Android Spinner
 # Including the library
 
 *Step 1.* Add it in your root build.gradle at the end of repositories:
-```
+```groovy
 allprojects {
 	repositories {
 		...
@@ -16,7 +16,7 @@ allprojects {
 ```
 
 *Step 2.* Add the dependency:
-```
+```groovy
 compile 'com.github.amlashi-sadra:AwesomeSpinner:1.0.1'
 ```
 
