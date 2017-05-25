@@ -22,6 +22,28 @@ compile 'com.github.amlashi-sadra:AwesomeSpinner:1.0.1'
 
 ## How To Use
 
+From very firts, you should add the *Awsome Spinner* component inside of your layout:
+```xml
+    <com.isapanah.awesomespinner.AwesomeSpinner
+        android:id="@+id/my_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+```
+
+- If you want to add a default value for hint just add the `spinnerHint` into your component
+- The default spinner has `RTL` direction, if you want to declare the direction of spinner just add the `spinnerDirection` tp *RTL* or *LTR*
+so the complete example with *LTR* direction and hint text to *Select a category* is:
+```xml
+    <com.isapanah.awesomespinner.AwesomeSpinner
+        android:id="@+id/my_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:spinnerDirection="ltr"
+        app:spinnerHint="Select a category" />
+```
+
+You can see the [EXAMPLE PROJECT](https://github.com/amlashi-sadra/AwesomeSpinner/tree/master/app/src/main) for more infromation.
+
 
 
 ## Developed by
