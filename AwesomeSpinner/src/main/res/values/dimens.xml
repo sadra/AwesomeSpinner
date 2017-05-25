@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    //-------- Spinner ---------
+    <dimen name="awesomeSpinner_margin">8dp</dimen>
+    <dimen name="awesomeSpinner_hintTextSize">16sp</dimen>
+    <dimen name="awesomeSpinner_marginBottom">20dp</dimen>
+    <dimen name="awesomeSpinner_marginBottomFromSectionTitle">60dp</dimen>
+
+
+    //-------- items -----------
+    <dimen name="awesomeSpinner_item_textSize">18sp</dimen>
+
+
+</resources>

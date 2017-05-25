@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.isapanah.awsomespinnerexample.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:padding="16dp">
+
+    <TextView
+        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        android:text="Awesome Spinner Example"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:text="Awesome Spinner - RTL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.isapanah.awesomespinner.AwesomeSpinner
+        android:id="@+id/awesomeSpinner_example_rtl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:spinnerDirection="rtl"
+        app:spinnerHint="استان خود را انتخاب کنید" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:text="Awesome Spinner - LTR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.isapanah.awesomespinner.AwesomeSpinner
+        android:id="@+id/awesomeSpinner_example_ltr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:spinnerDirection="ltr"
+        app:spinnerHint="Select a category" />
+
+</LinearLayout>
