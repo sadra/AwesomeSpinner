@@ -20,6 +20,10 @@ allprojects {
 compile 'com.github.amlashi-sadra:AwesomeSpinner:1.0.1'
 ```
 
+## How To Use
+
+
+
 ## Developed by
 
 Sadra Isapanag Amlashi
