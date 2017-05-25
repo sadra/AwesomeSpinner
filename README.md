@@ -1,4 +1,6 @@
 # AwesomeSpinner
+
+[![Join the chat at https://gitter.im/AwesomeSpinner/Lobby](https://badges.gitter.im/AwesomeSpinner/Lobby.svg)](https://gitter.im/AwesomeSpinner/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![](https://jitpack.io/v/amlashi-sadra/AwesomeSpinner.svg)](https://jitpack.io/#amlashi-sadra/AwesomeSpinner)
 
 Awesome Android Spinner
