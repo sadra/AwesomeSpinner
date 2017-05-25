@@ -64,6 +64,23 @@ ArrayAdapter<CharSequence> provincesAdapter = ArrayAdapter.createFromResource(th
 spinnerRTL.setAdapter(provincesAdapter, 0);
 ```
 
+**Step 3.** For final step, you can create a **Listener** for listening on item selection:
+```java
+my_spinner.setOnSpinnerItemClickListener(new AwesomeSpinner.onSpinnerItemClickListener<String>() {
+    @Override
+    public void onItemSelected(int position, String itemAtPosition) {
+        //TODO YOUR ACTIONS
+    }
+});
+```
+
+### Additional controls
+there is some controls for your spinner:
+
+| Control | Requierement | Result |
+| ------------- |:-------------:| -----:|
+| getSelectedItem() | - | `String`: returns the selected item |
+| isSelected() | - | `boolean`: returns **true** if any item selected, and vice versa |
 
 
 You can see the [EXAMPLE PROJECT](https://github.com/amlashi-sadra/AwesomeSpinner/tree/master/app/src/main) for more infromation.
