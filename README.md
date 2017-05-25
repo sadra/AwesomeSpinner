@@ -78,9 +78,10 @@ my_spinner.setOnSpinnerItemClickListener(new AwesomeSpinner.onSpinnerItemClickLi
 there is some controls for your spinner:
 
 | Control | Requierement | Result |
-| ------------- |:-------------:| -----:|
+| :------------- |:-------------:| :-----|
 | getSelectedItem() | - | `String`: returns the selected item |
 | isSelected() | - | `boolean`: returns **true** if any item selected, and vice versa |
+
 
 
 You can see the [EXAMPLE PROJECT](https://github.com/amlashi-sadra/AwesomeSpinner/tree/master/app/src/main) for more infromation.
