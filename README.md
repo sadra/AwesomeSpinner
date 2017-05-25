@@ -23,7 +23,9 @@ compile 'com.github.amlashi-sadra:AwesomeSpinner:1.0.1'
 ## Developed by
 
 Sadra Isapanag Amlashi
+
 Website: [isapanah.com](http://isapanah.com)
+
 Twitter: [@sadra_amlashi](https://twitter.com/sadra_amlashi)
 
 ## License
