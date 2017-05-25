@@ -77,10 +77,12 @@ my_spinner.setOnSpinnerItemClickListener(new AwesomeSpinner.onSpinnerItemClickLi
 ### Additional controls
 there is some controls for your spinner:
 
-| Control | Requierement | Result |
+| Control | Requierement | Info |
 | :------------- |:-------------:| :-----|
-| getSelectedItem() | - | `String`: returns the selected item |
-| isSelected() | - | `boolean`: returns **true** if any item selected, and vice versa |
+| getSelectedItem() | - | result = `String`: returns the selected item |
+| isSelected() | - | result = `boolean`: returns **true** if any item selected, and vice versa |
+| setSelection() | `int` | you should pass the **position of item** to select the item programatically |
+| isSelected() | `String` | you should pass the **item value** to select the item programatically |
 
 
 
