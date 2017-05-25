@@ -81,8 +81,8 @@ there is some controls for your spinner:
 | :------------- |:-------------:| :-----|
 | getSelectedItem() | - | result = `String`: returns the selected item |
 | isSelected() | - | result = `boolean`: returns **true** if any item selected, and vice versa |
-| setSelection() | `int` position | you should pass the **position of item** to select the item programatically |
-| isSelected() | `String` value | you should pass the **item value** to select the item programatically |
+| setSelection(NUMBER) | `int` position | you should pass the **position of item** to select the item programatically |
+| setSelection(TEXT) | `String` value | you should pass the **item value** to select the item programatically |
 
 
 
