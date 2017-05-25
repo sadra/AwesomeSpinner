@@ -5,7 +5,7 @@
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-%23E91E63.svg?style=flat)](https://gitter.im/AwesomeSpinner)
 [![Minimum Android SDK Version](https://img.shields.io/badge/Minimum%20Android%20SDK-14-blue.svg)](#)
 
-With *Awsome Spinner* you can impelement a material spinner with control on *direction layout* and *hint*.
+With **Awesome Spinner** you can implement a material spinner with access to define **direction layout** and **hint text**.
 
 ## Including the library
 
