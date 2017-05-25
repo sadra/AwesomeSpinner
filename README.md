@@ -1,7 +1,7 @@
 # AwesomeSpinner
-Awesome Android Spinner
-
 [![](https://jitpack.io/v/amlashi-sadra/AwesomeSpinner.svg)](https://jitpack.io/#amlashi-sadra/AwesomeSpinner)
+
+Awesome Android Spinner
 
 ## Including the library
 
@@ -81,8 +81,8 @@ there is some controls for your spinner:
 | :------------- |:-------------:| :-----|
 | getSelectedItem() | - | result = `String`: returns the selected item |
 | isSelected() | - | result = `boolean`: returns **true** if any item selected, and vice versa |
-| setSelection() | `int` | you should pass the **position of item** to select the item programatically |
-| isSelected() | `String` | you should pass the **item value** to select the item programatically |
+| setSelection() | `int` position | you should pass the **position of item** to select the item programatically |
+| isSelected() | `String` value | you should pass the **item value** to select the item programatically |
 
 
 
