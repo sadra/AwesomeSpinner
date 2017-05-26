@@ -117,6 +117,7 @@ public class AwesomeSpinner extends RelativeLayout {
                     AwesomeSpinner.this._callback.onItemSelected(position, (String) item);
                     _hintButton.setText(_spinner.getSelectedItem().toString());
                     _hintButton.setTextColor(Color.BLACK);
+                    _isSelected = true;
                 }
                 _allowToSelect = true;
 
