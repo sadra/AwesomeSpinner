@@ -1,4 +1,4 @@
-# AwesomeSpinner
+# Awesome Android Spinner
 [![](https://jitpack.io/v/amlashi-sadra/AwesomeSpinner.svg)](https://jitpack.io/#amlashi-sadra/AwesomeSpinner)
 [![License](https://img.shields.io/badge/licence-MIT-lightgrey.svg?style=flat)](https://github.com/amlashi-sadra/AwesomeSpinner/blob/master/LICENSE)
 [![Dependencies](https://img.shields.io/badge/dependencies-non-yellow.svg?style=flat)](#)
@@ -6,6 +6,10 @@
 [![Minimum Android SDK Version](https://img.shields.io/badge/Minimum%20Android%20SDK-14-blue.svg)](#)
 
 With **Awesome Spinner** you can implement a material spinner with access to define **direction layout** and **hint text**.
+
+![](https://github.com/amlashi-sadra/AwesomeSpinner/blob/master/art/awesome_spinner_rtl.gif)
+![](https://github.com/amlashi-sadra/AwesomeSpinner/blob/master/art/awesome_spinner_ltr.gif)
+
 
 ## Including the library
 
