@@ -37,7 +37,7 @@
         android:layout_height="1dp" />
 
 
-    <android.support.v7.widget.AppCompatSpinner
+    <com.isapanah.awesomespinner.spinnerDefaultSelection
         android:id="@+id/awesomeSpinner_spinner"
         android:layout_alignBottom="@+id/awesomeSpinner_hintButton"
         android:layout_width="match_parent"

@@ -22,7 +22,7 @@ import android.widget.RelativeLayout;
 public class AwesomeSpinner extends RelativeLayout {
 
     private AppCompatButton _hintButton;
-    private AppCompatSpinner _spinner;
+    private spinnerDefaultSelection _spinner;
     private ImageView _downArrow;
     private ArrayAdapter<String> _spinnerAdapterString;
     private ArrayAdapter<CharSequence> _spinnerAdapterCharSequence;
@@ -51,7 +51,7 @@ public class AwesomeSpinner extends RelativeLayout {
     private void init(AttributeSet attrs) {
         inflate(getContext(), R.layout.spinner_view, this);
         this._hintButton = (AppCompatButton) findViewById(R.id.awesomeSpinner_hintButton);
-        this._spinner = (AppCompatSpinner) findViewById(R.id.awesomeSpinner_spinner);
+        this._spinner = (spinnerDefaultSelection) findViewById(R.id.awesomeSpinner_spinner);
         this._downArrow = (ImageView) findViewById(R.id.awesomeSpinner_downArrow);
 
         if(attrs != null){
