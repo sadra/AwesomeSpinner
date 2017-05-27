@@ -215,8 +215,12 @@ public class AwesomeSpinner extends RelativeLayout {
         }
     }
 
-    private AppCompatSpinner getSpinner(){
+    public spinnerDefaultSelection getSpinner(){
         return _spinner;
+    }
+
+    public int getSelectedItemPosition(){
+        return _spinner.getSelectedItemPosition();
     }
 
     public interface onSpinnerItemClickListener<T> {
