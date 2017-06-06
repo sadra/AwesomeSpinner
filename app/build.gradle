@@ -14,7 +14,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.8"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -30,7 +30,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.github.amlashi-sadra:AwesomeSpinner:1.0.7'
     compile 'com.android.support:design:25.3.1'
     testCompile 'junit:junit:4.12'
+    compile project(':AwesomeSpinner')
 }

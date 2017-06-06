@@ -108,16 +108,17 @@ public class AwesomeSpinner extends RelativeLayout {
         _spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 Log.d(TAG, "position selected: " + position);
                 if (AwesomeSpinner.this._callback == null) {
                     throw new IllegalStateException("callback cannot be null");
                 }
                 if(_allowToSelect){
+                    _isSelected = true;
                     Object item = AwesomeSpinner.this._spinner.getItemAtPosition(position);
                     AwesomeSpinner.this._callback.onItemSelected(position, (String) item);
                     _hintButton.setText(_spinner.getSelectedItem().toString());
                     _hintButton.setTextColor(Color.BLACK);
-                    _isSelected = true;
                 }
                 _allowToSelect = true;
 
@@ -141,16 +142,17 @@ public class AwesomeSpinner extends RelativeLayout {
         _spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 Log.d(TAG, "position selected: " + position);
                 if (AwesomeSpinner.this._callback == null) {
                     throw new IllegalStateException("callback cannot be null");
                 }
                 if(_allowToSelect){
+                    _isSelected = true;
                     Object item = AwesomeSpinner.this._spinner.getItemAtPosition(position);
                     AwesomeSpinner.this._callback.onItemSelected(position, (String) item);
                     _hintButton.setText(_spinner.getSelectedItem().toString());
                     _hintButton.setTextColor(Color.BLACK);
-                    _isSelected = true;
                 }
                 _allowToSelect = true;
 

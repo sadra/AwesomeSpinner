@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerRTL.setOnSpinnerItemClickListener(new AwesomeSpinner.onSpinnerItemClickListener<String>() {
             @Override
             public void onItemSelected(int position, String itemAtPosition) {
-                Toast.makeText(getApplicationContext(), "Position: "+position+" | Item: "+itemAtPosition, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Position: "+position+" | Item: "+itemAtPosition+" | isSelected:"+spinnerLTR.isSelected(), Toast.LENGTH_LONG).show();
             }
         });
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerLTR.setOnSpinnerItemClickListener(new AwesomeSpinner.onSpinnerItemClickListener<String>() {
             @Override
             public void onItemSelected(int position, String itemAtPosition) {
-                Toast.makeText(getApplicationContext(), "Position: "+position+" | Item: "+itemAtPosition, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Position: "+position+" | Item: "+itemAtPosition+" | isSelected:"+spinnerLTR.isSelected(), Toast.LENGTH_LONG).show();
             }
         });
 
