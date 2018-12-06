@@ -52,4 +52,14 @@
         app:spinnerDirection="ltr"
         app:spinnerHint="Select a category" />
 
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/disable_spinners"
+        android:text="Disable Spinners"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
 </LinearLayout>

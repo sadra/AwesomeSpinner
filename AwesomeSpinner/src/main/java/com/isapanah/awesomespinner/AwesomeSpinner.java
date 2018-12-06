@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 /**
  * Created by sadra on 5/26/17.
@@ -118,7 +119,7 @@ public class AwesomeSpinner extends RelativeLayout {
                     Object item = AwesomeSpinner.this._spinner.getItemAtPosition(position);
                     AwesomeSpinner.this._callback.onItemSelected(position, (String) item);
                     _hintButton.setText(_spinner.getSelectedItem().toString());
-                    _hintButton.setTextColor(Color.BLACK);
+                    setHitButtonStyle();
                 }
                 _allowToSelect = true;
 
@@ -152,7 +153,7 @@ public class AwesomeSpinner extends RelativeLayout {
                     Object item = AwesomeSpinner.this._spinner.getItemAtPosition(position);
                     AwesomeSpinner.this._callback.onItemSelected(position, (String) item);
                     _hintButton.setText(_spinner.getSelectedItem().toString());
-                    _hintButton.setTextColor(Color.BLACK);
+                    setHitButtonStyle();
                 }
                 _allowToSelect = true;
 
@@ -235,5 +236,19 @@ public class AwesomeSpinner extends RelativeLayout {
         void onItemSelected(int position, T itemAtPosition);
     }
 
+    public void setSpinnerEnable(boolean enable){
+        this._spinner.setEnabled(enable);
+        this._hintButton.setEnabled(enable);
+        this._downArrow.setAlpha(enable ? 1.0f : 0.6f);
+        setHitButtonStyle();
+    }
+
+    public boolean isSpinnerEnable(){
+        return this._spinner.isEnabled();
+    }
+
+    private void setHitButtonStyle(){
+        this._hintButton.setTextColor(this._hintButton.isEnabled() ? Color.BLACK : Color.parseColor("#BDBDBD"));
+    }
 
 }

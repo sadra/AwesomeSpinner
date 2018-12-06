@@ -8,7 +8,11 @@ allprojects {
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion '26.0.2'
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
     defaultConfig {
         applicationId "com.isapanah.awsomespinnerexample"
         minSdkVersion 14
@@ -26,11 +30,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.github.amlashi-sadra:AwesomeSpinner:1.0.8'
-    compile project(':AwesomeSpinner')
+    compile 'com.android.support:design:25.4.0'
+    implementation 'com.github.sadra:AwesomeSpinner:1.1.0'
 }

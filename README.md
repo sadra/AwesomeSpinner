@@ -25,7 +25,7 @@ allprojects {
 
 **Step 2.** Add the dependency:
 ```groovy
-compile 'com.github.amlashi-sadra:AwesomeSpinner:1.0.1'
+    implementation 'com.github.sadra:AwesomeSpinner:1.0.8'
 ```
 
 ## How To Use
@@ -87,10 +87,12 @@ there is some controls for your spinner:
 
 | Control | Requierement | Info |
 | :------------- |:-------------:| :-----|
-| getSelectedItem() | - | result = `String`: returns the selected item |
-| isSelected() | - | result = `boolean`: returns **true** if any item selected, and vice versa |
-| setSelection(NUMBER) | `int` position | you should pass the **position of item** to select the item programatically |
-| setSelection(TEXT) | `String` value | you should pass the **item value** to select the item programatically |
+| getSelectedItem() | - | Result = `String`: Returns the selected item |
+| isSelected() | - | Result = `boolean`: Returns **true** if any item selected, and vice versa |
+| setSelection(NUMBER) | `int` position | You should pass the **position of item** to select the item programatically |
+| setSelection(TEXT) | `String` value | You should pass the **item value** to select the item programatically |
+| setSpinnerEnable(BOOLEAN); | `Boolean` value | If you want enable or disable the spinner, you should call this method. |
+| isSpinnerEnable(); | - | Result = `boolean`: Returns **true** if the spinner is enabled, and vice versa |
 
 You can see the [EXAMPLE PROJECT](https://github.com/amlashi-sadra/AwesomeSpinner/tree/master/app/src/main) for more infromation.
 
