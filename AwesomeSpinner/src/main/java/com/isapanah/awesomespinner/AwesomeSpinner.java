@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 /**
  * Created by sadra on 5/26/17.
@@ -108,16 +109,17 @@ public class AwesomeSpinner extends RelativeLayout {
         _spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 Log.d(TAG, "position selected: " + position);
                 if (AwesomeSpinner.this._callback == null) {
                     throw new IllegalStateException("callback cannot be null");
                 }
                 if(_allowToSelect){
+                    _isSelected = true;
                     Object item = AwesomeSpinner.this._spinner.getItemAtPosition(position);
                     AwesomeSpinner.this._callback.onItemSelected(position, (String) item);
                     _hintButton.setText(_spinner.getSelectedItem().toString());
-                    _hintButton.setTextColor(Color.BLACK);
-                    _isSelected = true;
+                    setHitButtonStyle();
                 }
                 _allowToSelect = true;
 
@@ -141,16 +143,17 @@ public class AwesomeSpinner extends RelativeLayout {
         _spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 Log.d(TAG, "position selected: " + position);
                 if (AwesomeSpinner.this._callback == null) {
                     throw new IllegalStateException("callback cannot be null");
                 }
                 if(_allowToSelect){
+                    _isSelected = true;
                     Object item = AwesomeSpinner.this._spinner.getItemAtPosition(position);
                     AwesomeSpinner.this._callback.onItemSelected(position, (String) item);
                     _hintButton.setText(_spinner.getSelectedItem().toString());
-                    _hintButton.setTextColor(Color.BLACK);
-                    _isSelected = true;
+                    setHitButtonStyle();
                 }
                 _allowToSelect = true;
 
@@ -233,5 +236,19 @@ public class AwesomeSpinner extends RelativeLayout {
         void onItemSelected(int position, T itemAtPosition);
     }
 
+    public void setSpinnerEnable(boolean enable){
+        this._spinner.setEnabled(enable);
+        this._hintButton.setEnabled(enable);
+        this._downArrow.setAlpha(enable ? 1.0f : 0.6f);
+        setHitButtonStyle();
+    }
+
+    public boolean isSpinnerEnable(){
+        return this._spinner.isEnabled();
+    }
+
+    private void setHitButtonStyle(){
+        this._hintButton.setTextColor(this._hintButton.isEnabled() ? Color.BLACK : Color.parseColor("#BDBDBD"));
+    }
 
 }
