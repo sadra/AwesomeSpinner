@@ -258,7 +258,7 @@ public class AwesomeSpinner extends RelativeLayout {
         );
     }
 
-    public void setHintButtonColor(int color){
+    public void setSelectedItemHintColor(int color){
         this.HINT_BUTTON_COLOR = color;
         this._hintButton.setTextColor(isSelected() ? this.HINT_BUTTON_COLOR : this.HINT_BUTTON_NOT_SELECTED_COLOR);
     }

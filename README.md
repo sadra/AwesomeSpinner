@@ -25,7 +25,7 @@ allprojects {
 
 **Step 2.** Add the dependency:
 ```groovy
-implementation 'com.github.sadra:AwesomeSpinner:1.1.0'
+implementation 'com.github.sadra:AwesomeSpinner:1.3.0'
 ```
 
 ## How To Use
@@ -93,6 +93,8 @@ there is some controls for your spinner:
 | setSelection(TEXT) | `String` value | You should pass the **item value** to select the item programatically |
 | setSpinnerEnable(BOOLEAN); | `Boolean` value | If you want enable or disable the spinner, you should call this method. |
 | isSpinnerEnable(); | - | Result = `boolean`: Returns **true** if the spinner is enabled, and vice versa |
+| setSelectedItemHintColor(); | `int` Color | If you need to change the **Selected Item Hint** color, just call the method and pass you color, ex: `Color.BLUE` |
+| setDownArrowTintColor(); | `int` Color | If you need to change the **Down Arrow** hint color, just call the method and pass you color, ex: `Color.BLUE` |
 
 You can see the [EXAMPLE PROJECT](https://github.com/amlashi-sadra/AwesomeSpinner/tree/master/app/src/main) for more infromation.
 
