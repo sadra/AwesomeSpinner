@@ -1,9 +1,16 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="24dp"
-        android:height="24dp"
-        android:viewportWidth="24.0"
-        android:viewportHeight="24.0">
-    <path
-        android:fillColor="#FF000000"
-        android:pathData="M7,10l5,5 5,-5z"/>
+    android:height="30dp"
+    android:width="30dp"
+    android:viewportHeight="16.0"
+    android:viewportWidth="16.0">
+    <group
+        android:pivotX="8"
+        android:pivotY="7"
+        android:rotation="180"
+        android:name="triableGroup">
+        <path
+            android:name="arrowPath"
+            android:fillColor="#797979"
+            android:pathData="M11.844,9.04L8.345,5.163c-0.195,-0.217 -0.511,-0.217 -0.705,0l-0.012,0.02L4.136,9.04c-0.195,0.217 -0.195,0.569 0,0.786l0.006,0.005C4.233,9.936 4.358,10 4.499,10h6.983c0.143,0 0.27,-0.068 0.359,-0.176l0.002,0.002C12.039,9.609 12.039,9.257 11.844,9.04z"/>
+    </group>
 </vector>

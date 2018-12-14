@@ -23,7 +23,7 @@
 
     <ImageView
         android:id="@+id/awesomeSpinner_downArrow"
-        android:src="@drawable/drop_down_arrow"
+        android:src="@drawable/ic_arrow_drop_down"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"

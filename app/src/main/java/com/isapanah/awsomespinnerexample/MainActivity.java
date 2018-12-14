@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerLTR = (AwesomeSpinner) findViewById(R.id.awesomeSpinner_example_ltr);
 
         spinnerLTR.setHintButtonColor(Color.BLUE);
+        spinnerLTR.setDownArrowTintColor(Color.RED);
 
         //Initialize the Adapter and spinnerRTL listener
         ArrayAdapter<CharSequence> provincesAdapter = ArrayAdapter.createFromResource(this, R.array.iran_provinces, android.R.layout.simple_spinner_item);
