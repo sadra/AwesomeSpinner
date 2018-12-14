@@ -1,5 +1,6 @@
 package com.isapanah.awsomespinnerexample;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         spinnerRTL = (AwesomeSpinner) findViewById(R.id.awesomeSpinner_example_rtl);
         spinnerLTR = (AwesomeSpinner) findViewById(R.id.awesomeSpinner_example_ltr);
+
+        spinnerLTR.setHintButtonColor(Color.BLUE);
 
         //Initialize the Adapter and spinnerRTL listener
         ArrayAdapter<CharSequence> provincesAdapter = ArrayAdapter.createFromResource(this, R.array.iran_provinces, android.R.layout.simple_spinner_item);

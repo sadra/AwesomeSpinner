@@ -33,6 +33,7 @@ public class AwesomeSpinner extends RelativeLayout {
     private boolean _isItemResourceDeclared = false;
     private int _spinnerType = 0;
     private boolean _isSelected;
+    private int _hintButtonColor = Color.BLACK;
 
     public AwesomeSpinner (Context context) {
         super(context);
@@ -248,7 +249,12 @@ public class AwesomeSpinner extends RelativeLayout {
     }
 
     private void setHitButtonStyle(){
-        this._hintButton.setTextColor(this._hintButton.isEnabled() ? Color.BLACK : Color.parseColor("#BDBDBD"));
+        this._hintButton.setTextColor(this._hintButton.isEnabled() ? _hintButtonColor : Color.parseColor("#BDBDBD"));
+    }
+
+    public void setHintButtonColor(int Color){
+        this._hintButtonColor = Color;
+        this._hintButton.setTextColor(this._hintButtonColor);
     }
 
 }

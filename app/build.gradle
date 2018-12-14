@@ -31,5 +31,6 @@ android {
 
 dependencies {
     compile 'com.android.support:design:25.4.0'
-    implementation 'com.github.sadra:AwesomeSpinner:1.1.0'
+    implementation project(":AwesomeSpinner")
+//    implementation 'com.github.sadra:AwesomeSpinner:1.1.0'
 }
