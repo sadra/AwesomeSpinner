@@ -1,12 +1,12 @@
 package com.isapanah.awsomespinnerexample;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
         spinnerRTL = (AwesomeSpinner) findViewById(R.id.awesomeSpinner_example_rtl);
         spinnerLTR = (AwesomeSpinner) findViewById(R.id.awesomeSpinner_example_ltr);
+
+        spinnerLTR.setSelectedItemHintColor(Color.BLUE);
+        spinnerLTR.setDownArrowTintColor(Color.RED);
 
         //Initialize the Adapter and spinnerRTL listener
         ArrayAdapter<CharSequence> provincesAdapter = ArrayAdapter.createFromResource(this, R.array.iran_provinces, android.R.layout.simple_spinner_item);

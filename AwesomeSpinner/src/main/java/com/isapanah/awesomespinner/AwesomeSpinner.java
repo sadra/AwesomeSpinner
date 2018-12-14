@@ -1,20 +1,19 @@
 package com.isapanah.awesomespinner;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatSpinner;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 /**
  * Created by sadra on 5/26/17.
@@ -33,6 +32,11 @@ public class AwesomeSpinner extends RelativeLayout {
     private boolean _isItemResourceDeclared = false;
     private int _spinnerType = 0;
     private boolean _isSelected;
+    private final int HINT_BUTTON_NOT_SELECTED_COLOR = Color.parseColor("#aaaaaa");
+    private final int HINT_BUTTON_DISABLED_COLOR = Color.parseColor("#BDBDBD");
+    private int HINT_BUTTON_COLOR = Color.BLACK;
+    private final int DOWN_ARROW_DEFAULT_TINT_COLOR = Color.parseColor("#797979");
+    private int DOWN_ARROW_TINT_COLOR = Color.parseColor("#797979");
 
     public AwesomeSpinner (Context context) {
         super(context);
@@ -63,7 +67,7 @@ public class AwesomeSpinner extends RelativeLayout {
 
     private void setSpinnerStyle(TypedArray typedArray){
 
-        _hintButton.setText(typedArray.getString(R.styleable.AwesomeSpinnerStyle_spinnerHint));
+        setHintButtonText(typedArray.getString(R.styleable.AwesomeSpinnerStyle_spinnerHint));
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         params.setMargins(10,40,10,10);
@@ -118,8 +122,7 @@ public class AwesomeSpinner extends RelativeLayout {
                     _isSelected = true;
                     Object item = AwesomeSpinner.this._spinner.getItemAtPosition(position);
                     AwesomeSpinner.this._callback.onItemSelected(position, (String) item);
-                    _hintButton.setText(_spinner.getSelectedItem().toString());
-                    setHitButtonStyle();
+                    setHintButtonText(_spinner.getSelectedItem().toString());
                 }
                 _allowToSelect = true;
 
@@ -152,8 +155,7 @@ public class AwesomeSpinner extends RelativeLayout {
                     _isSelected = true;
                     Object item = AwesomeSpinner.this._spinner.getItemAtPosition(position);
                     AwesomeSpinner.this._callback.onItemSelected(position, (String) item);
-                    _hintButton.setText(_spinner.getSelectedItem().toString());
-                    setHitButtonStyle();
+                    setHintButtonText(_spinner.getSelectedItem().toString());
                 }
                 _allowToSelect = true;
 
@@ -239,7 +241,7 @@ public class AwesomeSpinner extends RelativeLayout {
     public void setSpinnerEnable(boolean enable){
         this._spinner.setEnabled(enable);
         this._hintButton.setEnabled(enable);
-        this._downArrow.setAlpha(enable ? 1.0f : 0.6f);
+        setDownArrowStyle();
         setHitButtonStyle();
     }
 
@@ -248,7 +250,34 @@ public class AwesomeSpinner extends RelativeLayout {
     }
 
     private void setHitButtonStyle(){
-        this._hintButton.setTextColor(this._hintButton.isEnabled() ? Color.BLACK : Color.parseColor("#BDBDBD"));
+        this._hintButton.setTextColor(
+                this._hintButton.isEnabled() ?
+                        (isSelected() ? HINT_BUTTON_COLOR : HINT_BUTTON_NOT_SELECTED_COLOR)
+                        :
+                        HINT_BUTTON_DISABLED_COLOR
+        );
+    }
+
+    public void setSelectedItemHintColor(int color){
+        this.HINT_BUTTON_COLOR = color;
+        this._hintButton.setTextColor(isSelected() ? this.HINT_BUTTON_COLOR : this.HINT_BUTTON_NOT_SELECTED_COLOR);
+    }
+
+    private void setHintButtonText(String label){
+        _hintButton.setText(label);
+        setHitButtonStyle();
+    }
+
+    private void setDownArrowStyle(){
+        this._downArrow.setColorFilter(
+                this._hintButton.isEnabled() ? this.DOWN_ARROW_TINT_COLOR : this.DOWN_ARROW_DEFAULT_TINT_COLOR,
+                PorterDuff.Mode.SRC_ATOP);
+        this._downArrow.setAlpha(this._hintButton.isEnabled() ? 1.0f : 0.6f);
+    }
+
+    public void setDownArrowTintColor(int color){
+        this.DOWN_ARROW_TINT_COLOR = color;
+        setDownArrowStyle();
     }
 
 }

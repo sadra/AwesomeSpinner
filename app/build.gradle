@@ -17,8 +17,8 @@ android {
         applicationId "com.isapanah.awsomespinnerexample"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.1.0"
+        versionCode 12
+        versionName "1.2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -31,5 +31,6 @@ android {
 
 dependencies {
     compile 'com.android.support:design:25.4.0'
-    implementation 'com.github.sadra:AwesomeSpinner:1.1.0'
+    implementation project(":AwesomeSpinner")
+//    implementation 'com.github.sadra:AwesomeSpinner:1.2.0'
 }
