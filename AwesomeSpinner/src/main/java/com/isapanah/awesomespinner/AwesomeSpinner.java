@@ -32,7 +32,7 @@ public class AwesomeSpinner extends RelativeLayout {
     private boolean _isItemResourceDeclared = false;
     private int _spinnerType = 0;
     private boolean _isSelected;
-    private final int HINT_BUTTON_NOT_SELECTED_COLOR = Color.parseColor("#aaaaaa");
+    private int HINT_BUTTON_NOT_SELECTED_COLOR = Color.parseColor("#aaaaaa");
     private final int HINT_BUTTON_DISABLED_COLOR = Color.parseColor("#BDBDBD");
     private int HINT_BUTTON_COLOR = Color.BLACK;
     private final int DOWN_ARROW_DEFAULT_TINT_COLOR = Color.parseColor("#797979");
@@ -256,6 +256,11 @@ public class AwesomeSpinner extends RelativeLayout {
                         :
                         HINT_BUTTON_DISABLED_COLOR
         );
+    }
+
+    public void setHintTextColor(int color){
+        this.HINT_BUTTON_NOT_SELECTED_COLOR = color;
+        this._hintButton.setTextColor(isSelected() ? this.HINT_BUTTON_COLOR : this.HINT_BUTTON_NOT_SELECTED_COLOR);
     }
 
     public void setSelectedItemHintColor(int color){
