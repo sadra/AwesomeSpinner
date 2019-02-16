@@ -96,7 +96,7 @@ there is some controls for your spinner:
 | setHintTextColor(); | `int` Color | If you need to change the **Spinner Hint Text** color, just call the method and pass you color, ex: `Color.BLUE` |
 | setSelectedItemHintColor(); | `int` Color | If you need to change the **Selected Item Hint** color, just call the method and pass you color, ex: `Color.BLUE` |
 | setDownArrowTintColor(); | `int` Color | If you need to change the **Down Arrow** hint color, just call the method and pass you color, ex: `Color.BLUE` |
-| setDropDownViewResource(); | `int` Resource | If you need to change the **Spinner Row stype**, just call the method and pass you resource, ex: `R.layout.my_sipnner_row_item` |
+| setDropDownViewResource(RESOURCE); | `int` Resource | If you need to change the **Spinner Row stype**, just call the method and pass you resource, ex: `R.layout.my_sipnner_row_item` |
 
 You can see the [EXAMPLE PROJECT](https://github.com/amlashi-sadra/AwesomeSpinner/tree/master/app/src/main) for more infromation.
 
