@@ -88,6 +88,7 @@ there is some controls for your spinner:
 | Control | Requierement | Info |
 | :------------- |:-------------:| :-----|
 | getSelectedItem() | - | Result = `String`: Returns the selected item |
+| getSelectedItemPosition() | - | Result = `int`: Returns the selected item position. If there were no selected item, it returns `-1`. |
 | isSelected() | - | Result = `boolean`: Returns **true** if any item selected, and vice versa |
 | setSelection(NUMBER) | `int` position | You should pass the **position of item** to select the item programatically |
 | setSelection(TEXT) | `String` value | You should pass the **item value** to select the item programatically |
@@ -97,6 +98,7 @@ there is some controls for your spinner:
 | setSelectedItemHintColor(); | `int` Color | If you need to change the **Selected Item Hint** color, just call the method and pass you color, ex: `Color.BLUE` |
 | setDownArrowTintColor(); | `int` Color | If you need to change the **Down Arrow** hint color, just call the method and pass you color, ex: `Color.BLUE` |
 | setDropDownViewResource(RESOURCE); | `int` Resource | If you need to change the **Spinner Row stype**, just call the method and pass you resource, ex: `R.layout.my_sipnner_row_item` |
+| clearSelection(); | - | It clears the spinner selection. |
 
 You can see the [EXAMPLE PROJECT](https://github.com/amlashi-sadra/AwesomeSpinner/tree/master/app/src/main) for more infromation.
 

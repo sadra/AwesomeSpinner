@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        final TextView disable_spinners = (TextView) findViewById(R.id.disable_spinners);
+        final Button disable_spinners = (Button) findViewById(R.id.disable_spinners);
         disable_spinners.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,6 +111,20 @@ public class MainActivity extends AppCompatActivity {
                     spinnerRTL.setSpinnerEnable(true);
                     disable_spinners.setText("Disable Spinners");
                 }
+            }
+        });
+
+        findViewById(R.id.deselect_rtl).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spinnerRTL.clearSelection();
+            }
+        });
+
+        findViewById(R.id.deselect_ltr).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spinnerLTR.clearSelection();
             }
         });
 
