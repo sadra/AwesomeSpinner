@@ -299,4 +299,11 @@ public class AwesomeSpinner extends RelativeLayout {
         );
         _hintButton.setText(hintButtonLabel);
     }
+
+    public void setSpinnerHint(String label) {
+        hintButtonLabel = label;
+        if(!isSelected()){
+            setHitButtonStyle();
+        }
+    }
 }
