@@ -32,6 +32,7 @@ public class AwesomeSpinner extends RelativeLayout {
     private boolean _isItemResourceDeclared = false;
     private int _spinnerType = 0;
     private boolean _isSelected;
+    private String hintButtonLabel;
     private int HINT_BUTTON_NOT_SELECTED_COLOR = Color.parseColor("#aaaaaa");
     private final int HINT_BUTTON_DISABLED_COLOR = Color.parseColor("#BDBDBD");
     private int HINT_BUTTON_COLOR = Color.BLACK;
@@ -66,7 +67,7 @@ public class AwesomeSpinner extends RelativeLayout {
     }
 
     private void setSpinnerStyle(TypedArray typedArray){
-
+        hintButtonLabel = typedArray.getString(R.styleable.AwesomeSpinnerStyle_spinnerHint);
         setHintButtonText(typedArray.getString(R.styleable.AwesomeSpinnerStyle_spinnerHint));
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
@@ -81,7 +82,6 @@ public class AwesomeSpinner extends RelativeLayout {
                 _hintButton.setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
                 params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
                 _downArrow.setLayoutParams(params);
-
                 break;
         }
 
@@ -225,7 +225,11 @@ public class AwesomeSpinner extends RelativeLayout {
     }
 
     public int getSelectedItemPosition(){
-        return _spinner.getSelectedItemPosition();
+        if(isSelected()){
+            return _spinner.getSelectedItemPosition();
+        }else{
+            return -1;
+        }
     }
 
     public interface onSpinnerItemClickListener<T> {
@@ -285,4 +289,14 @@ public class AwesomeSpinner extends RelativeLayout {
         setDownArrowStyle();
     }
 
+    public void clearSelection() {
+        _isSelected = false;
+        this._hintButton.setTextColor(
+                this._hintButton.isEnabled() ?
+                        HINT_BUTTON_NOT_SELECTED_COLOR
+                        :
+                        HINT_BUTTON_DISABLED_COLOR
+        );
+        _hintButton.setText(hintButtonLabel);
+    }
 }
