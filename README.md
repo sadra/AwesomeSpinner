@@ -25,7 +25,7 @@ allprojects {
 
 **Step 2.** Add the dependency:
 ```groovy
-implementation 'com.github.sadra:AwesomeSpinner:1.4.0'
+implementation 'com.github.sadra:AwesomeSpinner:1.5.0'
 ```
 
 ## How To Use
