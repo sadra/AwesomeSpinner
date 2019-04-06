@@ -18,13 +18,13 @@ import com.isapanah.awesomespinner.AwesomeSpinner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity
+{
     AwesomeSpinner spinnerRTL, spinnerLTR;
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
@@ -42,9 +42,11 @@ public class MainActivity extends AppCompatActivity {
         //Initialize the Adapter and spinnerRTL listener
         ArrayAdapter<CharSequence> provincesAdapter = ArrayAdapter.createFromResource(this, R.array.iran_provinces, android.R.layout.simple_spinner_item);
         spinnerRTL.setAdapter(provincesAdapter, 0);
-        spinnerRTL.setOnSpinnerItemClickListener(new AwesomeSpinner.onSpinnerItemClickListener<String>() {
+        spinnerRTL.setOnSpinnerItemClickListener(new AwesomeSpinner.onSpinnerItemClickListener<String>()
+        {
             @Override
-            public void onItemSelected(int position, String itemAtPosition) {
+            public void onItemSelected(int position, String itemAtPosition)
+            {
                 Toast.makeText(getApplicationContext(), "Position: "+position+" | Item: "+itemAtPosition+" | isSelected:"+spinnerLTR.isSelected(), Toast.LENGTH_LONG).show();
             }
         });
@@ -61,16 +63,21 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
         spinnerLTR.setAdapter(categoriesAdapter);
-        spinnerLTR.setOnSpinnerItemClickListener(new AwesomeSpinner.onSpinnerItemClickListener<String>() {
+        spinnerLTR.setOnSpinnerItemClickListener(new AwesomeSpinner.onSpinnerItemClickListener<String>()
+        {
             @Override
-            public void onItemSelected(int position, String itemAtPosition) {
+            public void onItemSelected(int position, String itemAtPosition)
+            {
                 Toast.makeText(getApplicationContext(), "Position: "+position+" | Item: "+itemAtPosition+" | isSelected:"+spinnerLTR.isSelected(), Toast.LENGTH_LONG).show();
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
-            public void run() {
-                runOnUiThread(new Runnable() {
+        new Handler().postDelayed(new Runnable()
+        {
+            public void run()
+            {
+                runOnUiThread(new Runnable()
+                {
                     @Override
                     public void run() {
                         spinnerLTR.setSelection(2);
@@ -81,10 +88,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-
+            public void onClick(View view)
+            {
                 //Or you can check for spinnerLTR as the same way
                 if(spinnerRTL.isSelected()){
                     Snackbar.make(view, "Yes, spinnerRTL is selected the item: "+spinnerRTL.getSelectedItem()+".", Snackbar.LENGTH_LONG)
@@ -93,15 +101,13 @@ public class MainActivity extends AppCompatActivity {
                     Snackbar.make(view, "No, spinnerRTL doesn't select anything yet!", Snackbar.LENGTH_LONG)
                             .setAction("OK", null).show();
                 }
-
-                spinnerRTL.setSpinnerHint("تست هینت");
-
             }
         });
 
 
         final Button disable_spinners = (Button) findViewById(R.id.disable_spinners);
-        disable_spinners.setOnClickListener(new View.OnClickListener() {
+        disable_spinners.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 if(spinnerLTR.isSpinnerEnable()){
@@ -116,21 +122,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.deselect_rtl).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.deselect_rtl).setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 spinnerRTL.clearSelection();
             }
         });
 
-        findViewById(R.id.deselect_ltr).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.deselect_ltr).setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 spinnerLTR.clearSelection();
             }
         });
-
-
     }
-
 }
