@@ -303,7 +303,7 @@ public class AwesomeSpinner extends RelativeLayout {
     public void setSpinnerHint(String label) {
         hintButtonLabel = label;
         if(!isSelected()){
-            setHitButtonStyle();
+            _hintButton.setText(hintButtonLabel);
         }
     }
 }

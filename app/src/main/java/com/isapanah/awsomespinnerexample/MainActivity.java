@@ -94,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
                             .setAction("OK", null).show();
                 }
 
+                spinnerRTL.setSpinnerHint("تست هینت");
+
             }
         });
 
