@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AwesomeSpinner.iml" filepath="$PROJECT_DIR$/.idea/AwesomeSpinner.iml" />
       <module fileurl="file://$PROJECT_DIR$/AwesomeSpinner/AwesomeSpinner.iml" filepath="$PROJECT_DIR$/AwesomeSpinner/AwesomeSpinner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AwesomeSpinner/AwesomeSpinner-AwesomeSpinner.iml" filepath="$PROJECT_DIR$/AwesomeSpinner/AwesomeSpinner-AwesomeSpinner.iml" />
       <module fileurl="file://$PROJECT_DIR$/AwsomeSpinnerExample.iml" filepath="$PROJECT_DIR$/AwsomeSpinnerExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

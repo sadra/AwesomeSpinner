@@ -1,6 +1,8 @@
 package com.isapanah.awesomespinner;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.support.v7.widget.AppCompatSpinner;
 import android.util.AttributeSet;
 
@@ -14,14 +16,22 @@ public class spinnerDefaultSelection extends AppCompatSpinner {
     int prevPos = 0;
     public spinnerDefaultSelection(Context context) {
         super(context);
+        init();
     }
 
     public spinnerDefaultSelection(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public spinnerDefaultSelection(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        init();
+    }
+
+    private void init()
+    {
+        this.getBackground().setColorFilter(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
     }
 
     @Override
